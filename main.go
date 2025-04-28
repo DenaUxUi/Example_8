@@ -18,12 +18,12 @@ func main() {
     mux := http.NewServeMux()
     mux.HandleFunc("/", indexHandler)
 
-    println("Запуск сервера на порту", port)
+    println("Launching", port)
 
     err := http.ListenAndServe(":"+port, mux)
     if err != nil {
-        println("Ошибка сервера:", err.Error())
+        println("Server error:", err.Error())
     }
 
-    println("Сервер завершился") 
+    println("Session is end") 
 }
